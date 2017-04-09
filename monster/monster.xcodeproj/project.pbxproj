@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		127874701E9926F800375375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1278746F1E9926F800375375 /* AppDelegate.swift */; };
+		127874721E9926F800375375 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127874711E9926F800375375 /* ViewController.swift */; };
+		127874751E9926F800375375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127874731E9926F800375375 /* Main.storyboard */; };
+		127874781E9926F800375375 /* monster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 127874761E9926F800375375 /* monster.xcdatamodeld */; };
+		1278747A1E9926F800375375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127874791E9926F800375375 /* Assets.xcassets */; };
+		1278747D1E9926F800375375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1278747B1E9926F800375375 /* LaunchScreen.storyboard */; };
+		127874881E9926F800375375 /* monsterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127874871E9926F800375375 /* monsterTests.swift */; };
+		127874931E9926F800375375 /* monsterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127874921E9926F800375375 /* monsterUITests.swift */; };
+		127874A21E992A7100375375 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127874A11E992A7100375375 /* Monster.swift */; };
+		127874A51E9A8AC400375375 /* CreateMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127874A41E9A8AC400375375 /* CreateMonsterViewController.swift */; };
+		127874A71E9A8EAF00375375 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127874A61E9A8EAF00375375 /* DataController.swift */; };
+		127874A91E9AA2F100375375 /* SearchMonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127874A81E9AA2F100375375 /* SearchMonsterViewController.swift */; };
+		127874AB1E9AA30A00375375 /* MonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127874AA1E9AA30A00375375 /* MonsterViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		127874841E9926F800375375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 127874641E9926F800375375 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1278746B1E9926F800375375;
+			remoteInfo = monster;
+		};
+		1278748F1E9926F800375375 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 127874641E9926F800375375 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1278746B1E9926F800375375;
+			remoteInfo = monster;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1278746C1E9926F800375375 /* monster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = monster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1278746F1E9926F800375375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		127874711E9926F800375375 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		127874741E9926F800375375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		127874771E9926F800375375 /* monster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = monster.xcdatamodel; sourceTree = "<group>"; };
+		127874791E9926F800375375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1278747C1E9926F800375375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1278747E1E9926F800375375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		127874831E9926F800375375 /* monsterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monsterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		127874871E9926F800375375 /* monsterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monsterTests.swift; sourceTree = "<group>"; };
+		127874891E9926F800375375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1278748E1E9926F800375375 /* monsterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = monsterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		127874921E9926F800375375 /* monsterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monsterUITests.swift; sourceTree = "<group>"; };
+		127874941E9926F800375375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		127874A11E992A7100375375 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Monster.swift; path = Models/Monster.swift; sourceTree = "<group>"; };
+		127874A41E9A8AC400375375 /* CreateMonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateMonsterViewController.swift; path = Controllers/CreateMonsterViewController.swift; sourceTree = "<group>"; };
+		127874A61E9A8EAF00375375 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataController.swift; path = Controllers/DataController.swift; sourceTree = "<group>"; };
+		127874A81E9AA2F100375375 /* SearchMonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchMonsterViewController.swift; path = Controllers/SearchMonsterViewController.swift; sourceTree = "<group>"; };
+		127874AA1E9AA30A00375375 /* MonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonsterViewController.swift; path = Controllers/MonsterViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		127874691E9926F800375375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		127874801E9926F800375375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1278748B1E9926F800375375 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		127874631E9926F800375375 = {
+			isa = PBXGroup;
+			children = (
+				1278746E1E9926F800375375 /* monster */,
+				127874861E9926F800375375 /* monsterTests */,
+				127874911E9926F800375375 /* monsterUITests */,
+				1278746D1E9926F800375375 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1278746D1E9926F800375375 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1278746C1E9926F800375375 /* monster.app */,
+				127874831E9926F800375375 /* monsterTests.xctest */,
+				1278748E1E9926F800375375 /* monsterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1278746E1E9926F800375375 /* monster */ = {
+			isa = PBXGroup;
+			children = (
+				127874A31E9A8A9C00375375 /* controllers */,
+				127874A01E992A4B00375375 /* models */,
+				1278746F1E9926F800375375 /* AppDelegate.swift */,
+				127874711E9926F800375375 /* ViewController.swift */,
+				127874731E9926F800375375 /* Main.storyboard */,
+				127874791E9926F800375375 /* Assets.xcassets */,
+				1278747B1E9926F800375375 /* LaunchScreen.storyboard */,
+				1278747E1E9926F800375375 /* Info.plist */,
+				127874761E9926F800375375 /* monster.xcdatamodeld */,
+			);
+			path = monster;
+			sourceTree = "<group>";
+		};
+		127874861E9926F800375375 /* monsterTests */ = {
+			isa = PBXGroup;
+			children = (
+				127874871E9926F800375375 /* monsterTests.swift */,
+				127874891E9926F800375375 /* Info.plist */,
+			);
+			path = monsterTests;
+			sourceTree = "<group>";
+		};
+		127874911E9926F800375375 /* monsterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				127874921E9926F800375375 /* monsterUITests.swift */,
+				127874941E9926F800375375 /* Info.plist */,
+			);
+			path = monsterUITests;
+			sourceTree = "<group>";
+		};
+		127874A01E992A4B00375375 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				127874A11E992A7100375375 /* Monster.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		127874A31E9A8A9C00375375 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				127874A41E9A8AC400375375 /* CreateMonsterViewController.swift */,
+				127874A61E9A8EAF00375375 /* DataController.swift */,
+				127874A81E9AA2F100375375 /* SearchMonsterViewController.swift */,
+				127874AA1E9AA30A00375375 /* MonsterViewController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1278746B1E9926F800375375 /* monster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 127874971E9926F800375375 /* Build configuration list for PBXNativeTarget "monster" */;
+			buildPhases = (
+				127874681E9926F800375375 /* Sources */,
+				127874691E9926F800375375 /* Frameworks */,
+				1278746A1E9926F800375375 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = monster;
+			productName = monster;
+			productReference = 1278746C1E9926F800375375 /* monster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		127874821E9926F800375375 /* monsterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1278749A1E9926F800375375 /* Build configuration list for PBXNativeTarget "monsterTests" */;
+			buildPhases = (
+				1278747F1E9926F800375375 /* Sources */,
+				127874801E9926F800375375 /* Frameworks */,
+				127874811E9926F800375375 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				127874851E9926F800375375 /* PBXTargetDependency */,
+			);
+			name = monsterTests;
+			productName = monsterTests;
+			productReference = 127874831E9926F800375375 /* monsterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1278748D1E9926F800375375 /* monsterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1278749D1E9926F800375375 /* Build configuration list for PBXNativeTarget "monsterUITests" */;
+			buildPhases = (
+				1278748A1E9926F800375375 /* Sources */,
+				1278748B1E9926F800375375 /* Frameworks */,
+				1278748C1E9926F800375375 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				127874901E9926F800375375 /* PBXTargetDependency */,
+			);
+			name = monsterUITests;
+			productName = monsterUITests;
+			productReference = 1278748E1E9926F800375375 /* monsterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		127874641E9926F800375375 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Vatsalya Goel";
+				TargetAttributes = {
+					1278746B1E9926F800375375 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = K573827W24;
+						ProvisioningStyle = Automatic;
+					};
+					127874821E9926F800375375 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1278746B1E9926F800375375;
+					};
+					1278748D1E9926F800375375 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1278746B1E9926F800375375;
+					};
+				};
+			};
+			buildConfigurationList = 127874671E9926F800375375 /* Build configuration list for PBXProject "monster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 127874631E9926F800375375;
+			productRefGroup = 1278746D1E9926F800375375 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1278746B1E9926F800375375 /* monster */,
+				127874821E9926F800375375 /* monsterTests */,
+				1278748D1E9926F800375375 /* monsterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1278746A1E9926F800375375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1278747D1E9926F800375375 /* LaunchScreen.storyboard in Resources */,
+				1278747A1E9926F800375375 /* Assets.xcassets in Resources */,
+				127874751E9926F800375375 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		127874811E9926F800375375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1278748C1E9926F800375375 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		127874681E9926F800375375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				127874A21E992A7100375375 /* Monster.swift in Sources */,
+				127874A71E9A8EAF00375375 /* DataController.swift in Sources */,
+				127874721E9926F800375375 /* ViewController.swift in Sources */,
+				127874781E9926F800375375 /* monster.xcdatamodeld in Sources */,
+				127874701E9926F800375375 /* AppDelegate.swift in Sources */,
+				127874AB1E9AA30A00375375 /* MonsterViewController.swift in Sources */,
+				127874A51E9A8AC400375375 /* CreateMonsterViewController.swift in Sources */,
+				127874A91E9AA2F100375375 /* SearchMonsterViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1278747F1E9926F800375375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				127874881E9926F800375375 /* monsterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1278748A1E9926F800375375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				127874931E9926F800375375 /* monsterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		127874851E9926F800375375 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1278746B1E9926F800375375 /* monster */;
+			targetProxy = 127874841E9926F800375375 /* PBXContainerItemProxy */;
+		};
+		127874901E9926F800375375 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1278746B1E9926F800375375 /* monster */;
+			targetProxy = 1278748F1E9926F800375375 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		127874731E9926F800375375 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				127874741E9926F800375375 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1278747B1E9926F800375375 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1278747C1E9926F800375375 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		127874951E9926F800375375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		127874961E9926F800375375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		127874981E9926F800375375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K573827W24;
+				INFOPLIST_FILE = monster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vatsalya.monster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		127874991E9926F800375375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K573827W24;
+				INFOPLIST_FILE = monster/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vatsalya.monster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1278749B1E9926F800375375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = monsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vatsalya.monsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/monster.app/monster";
+			};
+			name = Debug;
+		};
+		1278749C1E9926F800375375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = monsterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vatsalya.monsterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/monster.app/monster";
+			};
+			name = Release;
+		};
+		1278749E1E9926F800375375 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = monsterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vatsalya.monsterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = monster;
+			};
+			name = Debug;
+		};
+		1278749F1E9926F800375375 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = monsterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vatsalya.monsterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = monster;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		127874671E9926F800375375 /* Build configuration list for PBXProject "monster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				127874951E9926F800375375 /* Debug */,
+				127874961E9926F800375375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		127874971E9926F800375375 /* Build configuration list for PBXNativeTarget "monster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				127874981E9926F800375375 /* Debug */,
+				127874991E9926F800375375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1278749A1E9926F800375375 /* Build configuration list for PBXNativeTarget "monsterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1278749B1E9926F800375375 /* Debug */,
+				1278749C1E9926F800375375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1278749D1E9926F800375375 /* Build configuration list for PBXNativeTarget "monsterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1278749E1E9926F800375375 /* Debug */,
+				1278749F1E9926F800375375 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		127874761E9926F800375375 /* monster.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				127874771E9926F800375375 /* monster.xcdatamodel */,
+			);
+			currentVersion = 127874771E9926F800375375 /* monster.xcdatamodel */;
+			path = monster.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 127874641E9926F800375375 /* Project object */;
+}

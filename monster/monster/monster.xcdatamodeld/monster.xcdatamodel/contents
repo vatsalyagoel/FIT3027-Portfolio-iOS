@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Monster" representedClassName="MonsterMO" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attackPower" optional="YES" attributeType="Integer 32" defaultValueString="1000" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="health" optional="YES" attributeType="Integer 32" defaultValueString="1000" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" defaultValueString="Danger Noodle" syncable="YES"/>
+        <attribute name="species" optional="YES" attributeType="String" defaultValueString="Snake" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Monster" positionX="-63" positionY="-18" width="128" height="135"/>
+    </elements>
+</model>
