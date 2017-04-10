@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oIc-UW-4Ea">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aOw-Wy-TTt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,57 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="monster" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXF-ce-ZRB">
-                                <rect key="frame" x="128" y="280.5" width="119" height="30"/>
-                                <state key="normal" title="Create a Monster"/>
-                                <connections>
-                                    <segue destination="z2l-8E-W3p" kind="show" identifier="createMonsterSegue" id="3rz-QI-NW0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4a-5k-XcH">
-                                <rect key="frame" x="130" y="318.5" width="116" height="30"/>
-                                <state key="normal" title="Search Monsters"/>
-                                <connections>
-                                    <segue destination="R2Q-ps-NW4" kind="show" identifier="searchMonstersSegue" id="Qng-0n-Pqf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1E-md-oOz">
-                                <rect key="frame" x="140" y="356.5" width="94" height="30"/>
-                                <state key="normal" title="View Monster"/>
-                                <connections>
-                                    <segue destination="zb2-TW-7Oz" kind="show" identifier="viewMonsterSegue" id="6Db-EH-X1p"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="C4a-5k-XcH" firstAttribute="top" secondItem="MXF-ce-ZRB" secondAttribute="bottom" constant="8" id="8UQ-LD-mlu"/>
-                            <constraint firstItem="C4a-5k-XcH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yoe-rw-zg9"/>
-                            <constraint firstItem="C4a-5k-XcH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gMY-aN-4ns"/>
-                            <constraint firstItem="H1E-md-oOz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mtz-GN-Ueq"/>
-                            <constraint firstItem="H1E-md-oOz" firstAttribute="top" secondItem="C4a-5k-XcH" secondAttribute="bottom" constant="8" id="rPg-Fc-qOI"/>
-                            <constraint firstItem="MXF-ce-ZRB" firstAttribute="centerX" secondItem="C4a-5k-XcH" secondAttribute="centerX" id="rv3-e7-L53"/>
-                            <constraint firstItem="C4a-5k-XcH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uH4-b3-H4g"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="ekO-Ul-l4s"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
-        </scene>
         <!--Search Monster View Controller-->
         <scene sceneID="Vr0-bR-v8w">
             <objects>
@@ -99,7 +48,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zb2-TW-7Oz" kind="show" identifier="showDetailSegue" id="0WG-OU-B8Z"/>
+                                    <segue destination="zb2-TW-7Oz" kind="show" identifier="showDetailSegue" id="Y8y-ck-SeP"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TotalCell" textLabel="rBz-lm-4Fu" style="IBUITableViewCellStyleDefault" id="3uU-gI-bCI">
@@ -125,13 +74,20 @@
                             <outlet property="delegate" destination="R2Q-ps-NW4" id="wFK-q4-n5G"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="jTB-0j-yU7">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="wdd-sr-q36">
+                            <connections>
+                                <segue destination="z2l-8E-W3p" kind="show" identifier="createMonsterSegue" id="pNK-Wx-jEJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="FDS-D9-MoO" id="RgY-Db-kB6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TWd-Bt-kIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971" y="138"/>
+            <point key="canvasLocation" x="3887.1999999999998" y="86.806596701649184"/>
         </scene>
         <!--Create Monster View Controller-->
         <scene sceneID="D0E-Vg-Krl">
@@ -205,22 +161,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="705-Jp-e9m">
-                                <rect key="frame" x="56" y="334.5" width="66" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <state key="normal" title="Update"/>
-                                <connections>
-                                    <action selector="update" destination="z2l-8E-W3p" eventType="primaryActionTriggered" id="lq6-ZG-d4L"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-HU-1PM">
-                                <rect key="frame" x="272" y="334.5" width="44" height="36"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="save" destination="z2l-8E-W3p" eventType="primaryActionTriggered" id="ouC-lw-ECt"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Monster Created Yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFt-7Y-Oo8">
                                 <rect key="frame" x="36" y="436.5" width="303" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -241,6 +181,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="aIC-LL-w5Y" secondAttribute="leading" id="0hR-Bp-sHI"/>
                             <constraint firstItem="QFt-7Y-Oo8" firstAttribute="leading" secondItem="lS8-55-Uew" secondAttribute="leadingMargin" constant="20" id="1Nq-hD-olN"/>
                             <constraint firstItem="BmN-jp-DZ3" firstAttribute="top" secondItem="Sbe-gb-fQy" secondAttribute="bottom" constant="28" id="4Sv-p9-Wji"/>
+                            <constraint firstItem="QFt-7Y-Oo8" firstAttribute="top" secondItem="9qt-Iq-MXG" secondAttribute="bottom" constant="172.5" id="76D-bs-ZLI"/>
                             <constraint firstItem="o1K-LN-Mls" firstAttribute="centerY" secondItem="dvZ-xJ-Q6V" secondAttribute="centerY" id="DOy-Dh-u95"/>
                             <constraint firstItem="Lz5-3P-Xfh" firstAttribute="trailing" secondItem="TX4-FS-sJW" secondAttribute="trailing" id="FnR-sK-8xj"/>
                             <constraint firstItem="QFt-7Y-Oo8" firstAttribute="centerX" secondItem="lS8-55-Uew" secondAttribute="centerX" id="IOu-c2-CQa"/>
@@ -248,16 +189,12 @@
                             <constraint firstItem="9qt-Iq-MXG" firstAttribute="leading" secondItem="tTd-s5-tKf" secondAttribute="leading" id="MII-hl-5Be"/>
                             <constraint firstItem="dvZ-xJ-Q6V" firstAttribute="trailing" secondItem="Lz5-3P-Xfh" secondAttribute="trailing" id="Obs-ry-cDZ"/>
                             <constraint firstItem="Lz5-3P-Xfh" firstAttribute="leading" secondItem="TX4-FS-sJW" secondAttribute="leading" id="P5m-uI-VeM"/>
-                            <constraint firstItem="705-Jp-e9m" firstAttribute="top" secondItem="aIC-LL-w5Y" secondAttribute="bottom" constant="75" id="PLn-Gv-1Wo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TX4-FS-sJW" secondAttribute="trailing" constant="10" id="TOg-CJ-yUR"/>
                             <constraint firstItem="9qt-Iq-MXG" firstAttribute="top" secondItem="tTd-s5-tKf" secondAttribute="bottom" constant="8" id="Ufo-ua-5ZM"/>
                             <constraint firstItem="PwH-rn-GoD" firstAttribute="centerY" secondItem="Lz5-3P-Xfh" secondAttribute="centerY" id="VrX-Jd-DGY"/>
                             <constraint firstAttribute="leadingMargin" secondItem="o1K-LN-Mls" secondAttribute="leading" id="XFb-yR-Jl7"/>
                             <constraint firstItem="aIC-LL-w5Y" firstAttribute="centerY" secondItem="9qt-Iq-MXG" secondAttribute="centerY" id="XOm-Hz-bxE"/>
-                            <constraint firstItem="QFt-7Y-Oo8" firstAttribute="top" secondItem="bn5-HU-1PM" secondAttribute="bottom" constant="66" id="ZLu-F3-Snh"/>
                             <constraint firstItem="tTd-s5-tKf" firstAttribute="top" secondItem="dvZ-xJ-Q6V" secondAttribute="bottom" constant="8" id="ZQy-Kh-Sh1"/>
-                            <constraint firstItem="bn5-HU-1PM" firstAttribute="centerY" secondItem="705-Jp-e9m" secondAttribute="centerY" id="bGg-aT-wAh"/>
-                            <constraint firstItem="bn5-HU-1PM" firstAttribute="leading" secondItem="705-Jp-e9m" secondAttribute="trailing" constant="150" id="cwY-mT-Qp2"/>
                             <constraint firstItem="TX4-FS-sJW" firstAttribute="centerY" secondItem="BmN-jp-DZ3" secondAttribute="centerY" id="f2l-Yo-yau"/>
                             <constraint firstItem="TY6-oj-lT9" firstAttribute="top" secondItem="QFt-7Y-Oo8" secondAttribute="bottom" constant="15" id="fR1-Pa-dcY"/>
                             <constraint firstAttribute="leadingMargin" secondItem="PwH-rn-GoD" secondAttribute="leading" id="gCE-m8-WCp"/>
@@ -266,7 +203,6 @@
                             <constraint firstItem="tTd-s5-tKf" firstAttribute="leading" secondItem="dvZ-xJ-Q6V" secondAttribute="leading" id="jOu-t1-jvV"/>
                             <constraint firstAttribute="leadingMargin" secondItem="BmN-jp-DZ3" secondAttribute="leading" id="mbD-26-hdb"/>
                             <constraint firstItem="dvZ-xJ-Q6V" firstAttribute="leading" secondItem="Lz5-3P-Xfh" secondAttribute="leading" id="mwg-mz-46t"/>
-                            <constraint firstItem="705-Jp-e9m" firstAttribute="leading" secondItem="lS8-55-Uew" secondAttribute="leadingMargin" constant="40" id="nE6-L1-ghX"/>
                             <constraint firstItem="9qt-Iq-MXG" firstAttribute="trailing" secondItem="tTd-s5-tKf" secondAttribute="trailing" id="pNI-3p-xSb"/>
                             <constraint firstItem="TMO-Ib-HuL" firstAttribute="centerY" secondItem="tTd-s5-tKf" secondAttribute="centerY" id="qkB-id-yXa"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QFt-7Y-Oo8" secondAttribute="trailing" constant="20" id="wFg-3R-3aO"/>
@@ -274,10 +210,26 @@
                             <constraint firstAttribute="leadingMargin" secondItem="TMO-Ib-HuL" secondAttribute="leading" id="yn6-me-Sa0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fEM-ac-RYD">
+                        <barButtonItem key="leftBarButtonItem" title="Update" id="OR3-ZB-Tsk">
+                            <connections>
+                                <action selector="update" destination="z2l-8E-W3p" id="0AL-8a-kmB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="j8V-WM-JH9">
+                            <connections>
+                                <action selector="save" destination="z2l-8E-W3p" id="NIM-Po-AQF"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="OR3-ZB-Tsk" id="DUU-3N-ohh"/>
+                            <outlet property="rightBarButtonItem" destination="j8V-WM-JH9" id="pSJ-l7-Ujz"/>
+                        </connections>
+                    </navigationItem>
                     <connections>
                         <outlet property="ageTextField" destination="Lz5-3P-Xfh" id="Ukk-r3-eT3"/>
                         <outlet property="attackPowerTextField" destination="tTd-s5-tKf" id="3ff-Vr-WXi"/>
-                        <outlet property="feedbackLabel" destination="TY6-oj-lT9" id="ZMp-fx-uOD"/>
+                        <outlet property="feedbackLabel" destination="TY6-oj-lT9" id="fQg-fi-BAb"/>
                         <outlet property="healthTextField" destination="9qt-Iq-MXG" id="evT-EU-Fdq"/>
                         <outlet property="nameTextField" destination="TX4-FS-sJW" id="dJf-vc-x3J"/>
                         <outlet property="speciesTextField" destination="dvZ-xJ-Q6V" id="qAu-pU-y9Q"/>
@@ -286,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gaq-rS-mQm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="-646"/>
+            <point key="canvasLocation" x="3887" y="-591"/>
         </scene>
         <!--Monster View Controller-->
         <scene sceneID="cwg-cV-a4F">
@@ -385,6 +337,13 @@
                             <constraint firstAttribute="leadingMargin" secondItem="Mku-2W-a7H" secondAttribute="leading" id="yvW-vx-0mP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kaP-Rl-Bvo">
+                        <barButtonItem key="rightBarButtonItem" title="Update" id="eMz-LC-udI">
+                            <connections>
+                                <segue destination="z2l-8E-W3p" kind="show" identifier="updateMonsterSegue" id="xlU-jk-uPZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="ageLabel" destination="BI7-O0-ct2" id="yUj-lb-EFW"/>
                         <outlet property="attackPowerLabel" destination="dOq-N0-Fy5" id="kA3-lK-W0W"/>
@@ -395,28 +354,87 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsL-lP-KW7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885.5999999999999" y="853.22338830584715"/>
+            <point key="canvasLocation" x="3887.1999999999998" y="845.1274362818591"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="cJf-ly-eCt">
+        <!--Create-->
+        <scene sceneID="Fto-UP-TvT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oIc-UW-4Ea" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a6q-TY-nde" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Create" id="jKo-TX-QUv"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UKy-h3-5wg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a98-pg-IR8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mFL-sK-IOQ"/>
+                        <segue destination="z2l-8E-W3p" kind="relationship" relationship="rootViewController" id="X32-tx-3zp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4cZ-DK-1hu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LaN-PO-6uB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="268" y="139"/>
+            <point key="canvasLocation" x="2948" y="-591"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oxL-6T-grC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EYL-4T-wIu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="0jN-iC-SxB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PhE-KE-Pcz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R2Q-ps-NW4" kind="relationship" relationship="rootViewController" id="I1f-me-ezz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1br-q3-2ps" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2948" y="86.806596701649184"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Oeh-QL-TD2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hJC-ZL-2f4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="kyW-Ib-kjw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R3I-yQ-BKQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zb2-TW-7Oz" kind="relationship" relationship="rootViewController" id="GPe-eq-zJJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIg-fz-S83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2948" y="845.1274362818591"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="B7a-Wr-AFv">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aOw-Wy-TTt" customClass="ViewController" customModule="monster" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="dED-wj-H5X">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="a6q-TY-nde" kind="relationship" relationship="viewControllers" id="3U6-4M-LNx"/>
+                        <segue destination="EYL-4T-wIu" kind="relationship" relationship="viewControllers" id="CTA-ku-vt1"/>
+                        <segue destination="hJC-ZL-2f4" kind="relationship" relationship="viewControllers" id="C7H-Y8-V7B"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l0v-K8-8yp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2071" y="87"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0WG-OU-B8Z"/>
+        <segue reference="X32-tx-3zp"/>
+        <segue reference="GPe-eq-zJJ"/>
     </inferredMetricsTieBreakers>
 </document>

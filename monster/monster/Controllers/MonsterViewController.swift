@@ -18,16 +18,18 @@ class MonsterViewController: UIViewController {
     @IBOutlet var attackPowerLabel: UILabel!
     @IBOutlet var healthLabel: UILabel!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.title = monster.name
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         nameLabel.text = monster.name
         ageLabel.text = String(monster.age)
         speciesLabel.text = monster.species
         attackPowerLabel.text = String(monster.attackPower)
         healthLabel.text = String(monster.health)
+        self.navigationItem.title = monster.name
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
@@ -36,15 +38,18 @@ class MonsterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "updateMonsterSegue" {
+            let vc = segue.destination as! CreateMonsterViewController
+            vc.monster = self.monster
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            vc.dataController = appDelegate.dataController
+        }
     }
-    */
 
 }

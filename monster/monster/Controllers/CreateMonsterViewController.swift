@@ -26,8 +26,31 @@ class CreateMonsterViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Create a monster"
         // Do any additional setup after loading the view.
+        if monster != nil {
+            nameTextField.text = monster?.name
+            ageTextField.text = "\(monster?.age ?? 0)"
+            speciesTextField.text = monster?.species
+            attackPowerTextField.text = "\(monster?.attackPower ?? 0)"
+            healthTextField.text = "\(monster?.health ?? 0)"
+            
+        }
+        if (self.navigationController?.viewControllers.count)! >= 2{
+            if (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as? SearchMonsterViewController) != nil {
+                self.navigationItem.leftBarButtonItem = nil
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(CreateMonsterViewController.cancel))
+            } else if (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as? MonsterViewController) != nil {
+                self.navigationItem.rightBarButtonItem = self.navigationItem.leftBarButtonItem
+                self.navigationItem.leftBarButtonItem = nil
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(CreateMonsterViewController.cancel))
+            }
+        }
     }
 
+    func cancel()
+    {
+        self.navigationController?.popToRootViewController(animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -52,6 +75,7 @@ class CreateMonsterViewController: UIViewController {
         feedbackLabel.text = "New monster has been created"
         
         dataController?.saveContext()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func update() {
@@ -73,6 +97,7 @@ class CreateMonsterViewController: UIViewController {
             
             summaryLabel.text = ""
             feedbackLabel.text = "Monster has been updated"
+            self.navigationController?.popToRootViewController(animated: true)
         }
         else {
             self.save()

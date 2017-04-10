@@ -9,12 +9,17 @@
 import UIKit
 import CoreData
 
-class SearchMonsterViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchBarDelegate {
+class SearchMonsterViewController: UITableViewController, NSFetchedResultsControllerDelegate, UISearchBarDelegate, UINavigationControllerDelegate {
     
     var managedObjectContext: NSManagedObjectContext!
     @IBOutlet weak var searchBar: UISearchBar!
     
     var fetchedResultsController: NSFetchedResultsController<MonsterMO>?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.filter(searchText: "")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +121,10 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
                 let vc = segue.destination as! MonsterViewController
                 vc.monster = monster
             }
+        } else if segue.identifier == "createMonsterSegue" {
+            let vc = segue.destination as! CreateMonsterViewController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            vc.dataController = appDelegate.dataController
         }
     }
     
@@ -123,5 +132,5 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.filter(searchText: searchText)
     }
-
+    
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITabBarController, UITabBarControllerDelegate {
     
     var dataController: DataController!
     
@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         dataController = appDelegate.dataController
         dataController.initializeMonsters()
+        self.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -25,23 +26,38 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "createMonsterSegue") {
-            if let destinationVC = segue.destination as? CreateMonsterViewController {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if let navController = viewController as? UINavigationController{
+            if let destinationVC = navController.childViewControllers.first as? CreateMonsterViewController{
                 destinationVC.dataController = self.dataController
-            }
-        }
-        if(segue.identifier == "searchMonstersSegue") {
-            if let destinationVC = segue.destination as? SearchMonsterViewController {
+                self.tabBarController?.selectedIndex = 0
+            } else if let destinationVC = navController.childViewControllers.first as? SearchMonsterViewController{
                 destinationVC.managedObjectContext = self.dataController.persistentContainer.viewContext
-            }
-        }
-        if(segue.identifier == "viewMonsterSegue") {
-            if let destinationVC = segue.destination as? MonsterViewController {
+                self.tabBarController?.selectedIndex = 1
+            } else if let destinationVC = navController.childViewControllers.first as? MonsterViewController{
                 destinationVC.monster = self.dataController.loadMonster(id: "Default")
+                self.tabBarController?.selectedIndex = 2
             }
         }
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "createMonsterSegue") {
+//            if let destinationVC = segue.destination as? CreateMonsterViewController {
+//                destinationVC.dataController = self.dataController
+//            }
+//        }
+//        if(segue.identifier == "searchMonstersSegue") {
+//            if let destinationVC = segue.destination as? SearchMonsterViewController {
+//                destinationVC.managedObjectContext = self.dataController.persistentContainer.viewContext
+//            }
+//        }
+//        if(segue.identifier == "viewMonsterSegue") {
+//            if let destinationVC = segue.destination as? MonsterViewController {
+//                destinationVC.monster = self.dataController.loadMonster(id: "Default")
+//            }
+//        }
+//    }
     
 }
 
