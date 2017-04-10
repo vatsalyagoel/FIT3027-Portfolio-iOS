@@ -360,7 +360,9 @@
         <scene sceneID="Fto-UP-TvT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a6q-TY-nde" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Create" id="jKo-TX-QUv"/>
+                    <tabBarItem key="tabBarItem" title="Create" id="jKo-TX-QUv">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-14"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a98-pg-IR8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -375,11 +377,13 @@
             </objects>
             <point key="canvasLocation" x="2948" y="-591"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search-->
         <scene sceneID="oxL-6T-grC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EYL-4T-wIu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="0jN-iC-SxB"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="0jN-iC-SxB">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-14"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PhE-KE-Pcz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -394,11 +398,13 @@
             </objects>
             <point key="canvasLocation" x="2948" y="86.806596701649184"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--View-->
         <scene sceneID="Oeh-QL-TD2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hJC-ZL-2f4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="kyW-Ib-kjw"/>
+                    <tabBarItem key="tabBarItem" title="View" selectedImage="10" id="kyW-Ib-kjw">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-14"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R3I-yQ-BKQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -419,6 +425,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aOw-Wy-TTt" customClass="ViewController" customModule="monster" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="dED-wj-H5X">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -433,6 +440,9 @@
             <point key="canvasLocation" x="2071" y="87"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="10" width="16" height="16"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="X32-tx-3zp"/>
         <segue reference="GPe-eq-zJJ"/>

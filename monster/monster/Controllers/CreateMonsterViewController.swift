@@ -37,11 +37,11 @@ class CreateMonsterViewController: UIViewController {
         if (self.navigationController?.viewControllers.count)! >= 2{
             if (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as? SearchMonsterViewController) != nil {
                 self.navigationItem.leftBarButtonItem = nil
-                self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(CreateMonsterViewController.cancel))
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(CreateMonsterViewController.cancel))
             } else if (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as? MonsterViewController) != nil {
                 self.navigationItem.rightBarButtonItem = self.navigationItem.leftBarButtonItem
                 self.navigationItem.leftBarButtonItem = nil
-                self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: nil, action: #selector(CreateMonsterViewController.cancel))
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel, target: self, action: #selector(CreateMonsterViewController.cancel))
             }
         }
     }
