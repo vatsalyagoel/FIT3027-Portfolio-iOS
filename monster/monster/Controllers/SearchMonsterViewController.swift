@@ -18,8 +18,8 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Search Monsters"
-        
+        self.navigationItem.title = "Monsters"
+        searchBar.placeholder = "Search"
         searchBar.delegate = self
         self.filter(searchText: "")
         // Do any additional setup after loading the view.
@@ -52,40 +52,60 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
     
     // MARK: TableView Data Source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        if let sections = fetchedResultsController?.sections {
-            return sections.count
-        }
-        
-        return 0
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchedResultsController?.sections {
-            let currentSection = sections[section]
-            return currentSection.numberOfObjects
+            switch section {
+            case 0:
+                return sections[section].numberOfObjects
+            case 1:
+                return 1
+            default:
+                return 0
+            }
         }
-        
         return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MonsterCell", for: indexPath as IndexPath)
-        let monster = fetchedResultsController?.object(at: indexPath as IndexPath)
+        if indexPath.section == 0{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MonsterCell", for: indexPath as IndexPath)
+            let monster = fetchedResultsController?.object(at: indexPath as IndexPath)
+            
+            cell.textLabel?.text = monster?.name
+            cell.detailTextLabel?.text = monster?.species
+            
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TotalCell", for: indexPath as IndexPath)
+            if let sections = fetchedResultsController?.sections {
+                cell.textLabel?.text = "Total number of monsters: \(sections[0].numberOfObjects)"
+            }
+            return cell
+        }
         
-        cell.textLabel?.text = monster?.name
-        cell.detailTextLabel?.text = monster?.species
-        
-        return cell
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if let sections = fetchedResultsController?.sections {
-            let currentSection = sections[section]
-            return currentSection.name
+        switch section {
+            case 0:
+                return "Monsters"
+            case 1:
+                return "Total Row"
+            default:
+                return nil
         }
-        
-        return nil
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1
+        {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
+
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -103,15 +123,5 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.filter(searchText: searchText)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
