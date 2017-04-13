@@ -18,8 +18,6 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
         dataController = appDelegate.dataController
         dataController.initializeMonsters()
         self.delegate = self
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +25,7 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    //Initialize tab bar controller
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         if let navController = viewController as? UINavigationController{
             if let destinationVC = navController.childViewControllers.first as? CreateMonsterViewController{
@@ -41,24 +40,5 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
             }
         }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if(segue.identifier == "createMonsterSegue") {
-//            if let destinationVC = segue.destination as? CreateMonsterViewController {
-//                destinationVC.dataController = self.dataController
-//            }
-//        }
-//        if(segue.identifier == "searchMonstersSegue") {
-//            if let destinationVC = segue.destination as? SearchMonsterViewController {
-//                destinationVC.managedObjectContext = self.dataController.persistentContainer.viewContext
-//            }
-//        }
-//        if(segue.identifier == "viewMonsterSegue") {
-//            if let destinationVC = segue.destination as? MonsterViewController {
-//                destinationVC.monster = self.dataController.loadMonster(id: "Default")
-//            }
-//        }
-//    }
-    
 }
 

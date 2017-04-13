@@ -45,7 +45,10 @@ class CreateMonsterViewController: UIViewController {
             }
         }
     }
-
+    
+    /**
+     * Go to root view controller
+     */
     func cancel()
     {
         self.navigationController?.popToRootViewController(animated: false)
@@ -56,6 +59,9 @@ class CreateMonsterViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /**
+     * Create new monster
+     */
     @IBAction func save() {
         monster = dataController?.addMonster()
         guard let text = nameTextField.text, !text.isEmpty else {
@@ -78,6 +84,9 @@ class CreateMonsterViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
+    /**
+     * Update the monster if created
+     */
     @IBAction func update() {
         if (monster != nil)
         {
@@ -103,15 +112,5 @@ class CreateMonsterViewController: UIViewController {
             self.save()
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

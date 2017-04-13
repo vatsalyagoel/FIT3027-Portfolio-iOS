@@ -24,19 +24,21 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Monsters"
-        searchBar.placeholder = "Search"
+        searchBar.placeholder = "Search" //Setup search bar
         searchBar.delegate = self
         self.filter(searchText: "")
-        // Do any additional setup after loading the view.
     }
 
+    /**
+     * Fiter method that gets the search string and gets the updated list from core data
+     */
     func filter(searchText: String) {
         fetchedResultsController = nil
         let monsterFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Monster")
         let primarySortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         let secondarySortDescriptor = NSSortDescriptor(key: "species", ascending: true)
         monsterFetchRequest.sortDescriptors = [primarySortDescriptor, secondarySortDescriptor]
-        monsterFetchRequest.predicate =  searchText.characters.count > 0 ? NSPredicate(format:"name contains[cd] %@ AND id != 'Default'", searchText) : NSPredicate(format:"id != 'Default'")
+        monsterFetchRequest.predicate =  searchText.characters.count > 0 ? NSPredicate(format:"name contains[cd] %@ AND id != 'Default'", searchText) : NSPredicate(format:"id != 'Default'") //Filter Query
         fetchedResultsController = NSFetchedResultsController(
             fetchRequest: monsterFetchRequest as! NSFetchRequest<MonsterMO>,
             managedObjectContext: self.managedObjectContext,
@@ -66,7 +68,7 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
             case 0:
                 return sections[section].numberOfObjects
             case 1:
-                return 1
+                return 1 //Total Row
             default:
                 return 0
             }
@@ -83,7 +85,7 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
             cell.detailTextLabel?.text = monster?.species
             
             return cell
-        } else {
+        } else { //Total Row
             let cell = tableView.dequeueReusableCell(withIdentifier: "TotalCell", for: indexPath as IndexPath)
             if let sections = fetchedResultsController?.sections {
                 cell.textLabel?.text = "Total number of monsters: \(sections[0].numberOfObjects)"
@@ -107,7 +109,7 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1
         {
-            tableView.deselectRow(at: indexPath, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true) //Deselect row if total row selected
         }
     }
 
@@ -118,12 +120,12 @@ class SearchMonsterViewController: UITableViewController, NSFetchedResultsContro
             let indexPath = tableView.indexPath(for: cell)!
             let monster = fetchedResultsController?.object(at: indexPath)
             if segue.identifier == "showDetailSegue" {
-                let vc = segue.destination as! MonsterViewController
+                let vc = segue.destination as! MonsterViewController //Show Detail
                 vc.monster = monster
             }
         } else if segue.identifier == "createMonsterSegue" {
             let vc = segue.destination as! CreateMonsterViewController
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate //Create Monster
             vc.dataController = appDelegate.dataController
         }
     }

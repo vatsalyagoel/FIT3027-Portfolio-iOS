@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MonsterViewController: UIViewController {
+class MonsterViewController: UIViewController { //Show monster
     
     var monster: MonsterMO!
     

@@ -8,7 +8,9 @@
 
 import UIKit
 import CoreData
-
+/**
+ * Database Controller
+ */
 class DataController: NSObject {
     
     var persistentContainer: NSPersistentContainer!
@@ -30,7 +32,7 @@ class DataController: NSObject {
         return monster!
     }
     
-    func loadMonster(id: String) -> MonsterMO? {
+    func loadMonster(id: String) -> MonsterMO? { //Get monster from ID
         let context = persistentContainer.viewContext
         let monstersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Monster")
         monstersFetch.predicate = NSPredicate(format: "id == %@", id)
@@ -48,7 +50,7 @@ class DataController: NSObject {
         }
     }
     
-    func initializeMonsters() {
+    func initializeMonsters() { //Create default monster if no monster created
         let context = persistentContainer.viewContext
         let monstersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Monster")
         monstersFetch.predicate = NSPredicate(format: "id == 'Default'")
@@ -68,7 +70,7 @@ class DataController: NSObject {
         }
     }
     
-    func saveContext () {
+    func saveContext () { //save Datbase changes
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
